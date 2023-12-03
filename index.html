@@ -14,31 +14,26 @@
     </p>
     <h3>Upload Your Image</h3>
 
-
-
-
-
-
-    <div class="disc">
-
+    <div class="content1">
     <form id="form1">
-          <label for="discription">Image Discription:  </label>
-          <br>
-          <input type="text" id="discription" placeholder="Enter image discription">
-          <br><br>
-        <input type="submit" value= "Submit" id="button1">
-        <p class="output" id="output1"> </p>
+      
+      <label for="discription">Image Discription:  </label>
+      <br>
+      <input type="text" id="discription" placeholder="Enter image discription">  
+      <p class="output" id="output1"> </p>
     </form>
     </div>
 
-    <div id="photodiv">
-      <form id="photoform" action="https://htmlcssjs-gbenga.s3.amazonaws.com/pictures/" method="POST">
-        <label for="photo1">Select Image:</label>
-        <input type="file" accept="image/jpeg, image/png, image/jpg" id="photo1">
-        <br><br>
-        <div id="canvas"></div>
-      </form>
-    </div>
+    <div class="content2">
+    <form id="form2">
+      <label for="photo1">Select Image:</label>
+      <input type="file" accept="image/jpeg, image/png, image/jpg" id="photo1">
+      <br><br>
+      <button class= "submitButton" for="content2">Submit</button>
+      <div id="canvas"></div>
+  </form>
+  </div>
+
   </body>
 
   <script src="./index.js"></script>

@@ -1,12 +1,12 @@
 .title {
-  text-align: center;
+  text-align:right;
   color: rgb(84, 28, 99);
-  background-color: rgb(255, 255, 255);
+  background-color: #d7d1d1;
 }
 
 body {
-  height: 90%;
-  width:90%;
+  height: 100%;
+  width:100%;
   background-color: #d7d1d1;
 }
 
@@ -28,31 +28,35 @@ p {
 }
 
 #canvas{
-  width: 900px;
-  height:500px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 500px;
+  height:100px;
+  margin-left:0% ;
+  margin-right: 0%;
   background-position: center;
   background-size: cover;
   flex-shrink: inherit;
 }
 
 img {
-  height: 30%;
-  width: 100%;
-  display:-ms-flexbox;
-  margin-left: auto;
-  margin-right: auto; 
+  height:180px;
+  width: 1398px;
+  object-fit: cover;
+  display: flex;
+
+  margin-left: 20px;
+  margin-right: 20px; 
 }
 
-#photodiv{
-  text-align: center;
-}
-
-.disc {
+.content1 {
   text-align: center;
   color: rgb(0, 0, 0);
 }
+
+.content2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
 h3 {
   text-align: center;
   color: rgb(228, 33, 33);
