@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Color Hull</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+
+    <h1 class="title">ColoHull</h1>
+    <img src="https://www.visithull.org/wp-content/uploads/2020/01/Hull-Fountains-Queen-Victoria-Square-1390x611.jpg">
+    <p>
+      I am creating this page to serve my h5 file from Colourising Historical
+      Photos of Hull.<br>All you need to do is upload any historical image of your choice and this model will dive you the real colorised image
+    </p>
+    <h3>Upload Your Image</h3>
+
+
+
+
+
+
+    <div class="disc">
+
+    <form id="form1">
+          <label for="discription">Image Discription:  </label>
+          <br>
+          <input type="text" id="discription" placeholder="Enter image discription">
+          <br><br>
+        <input type="submit" value= "Submit" id="button1">
+        <p class="output" id="output1"> </p>
+    </form>
+    </div>
+
+    <div id="photodiv">
+      <form id="photoform" action="https://htmlcssjs-gbenga.s3.amazonaws.com/pictures/" method="POST">
+        <label for="photo1">Select Image:</label>
+        <input type="file" accept="image/jpeg, image/png, image/jpg" id="photo1">
+        <br><br>
+        <div id="canvas"></div>
+      </form>
+    </div>
+  </body>
+
+  <script src="./index.js"></script>
+
+</html>
+
