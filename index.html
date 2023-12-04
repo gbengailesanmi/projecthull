@@ -20,18 +20,20 @@
       <label for="discription">Image Discription:  </label>
       <br>
       <input type="text" id="discription" placeholder="Enter image discription">  
+      <br>
+      <input type="submit" for="discription" id="button1"> 
       <p class="output" id="output1"> </p>
     </form>
     </div>
 
     <div class="content2">
-    <form id="form2">
+      <form id="imageForm">
       <label for="photo1">Select Image:</label>
-      <input type="file" accept="image/jpeg, image/png, image/jpg" id="photo1">
-      <br><br>
-      <button class= "submitButton" for="content2">Submit</button>
+      <input type="file" accept="image/*" id="photo1">
+      <br>
+      <button type="submit">Upload</button>
+      </form><br>
       <div id="canvas"></div>
-  </form>
   </div>
 
   </body>
