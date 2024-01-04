@@ -4,38 +4,57 @@
     <title>Color Hull</title>
     <link rel="stylesheet" href="./index.css">
   </head>
+
   <body>
 
-    <h1 class="title">ColoHull</h1>
-    <img src="https://www.visithull.org/wp-content/uploads/2020/01/Hull-Fountains-Queen-Victoria-Square-1390x611.jpg">
+
+    <h4 id="top"></h4>
+    <a href="#bottom">Scroll To Bottom</a>
+    <h1 class="title">ColorHull</h1>
+
+    <div class="row">
+      <div class="column">
+        <img src="https://www.visithull.org/wp-content/uploads/2020/01/Hull-Fountains-Queen-Victoria-Square-1390x611.jpg" alt="hull1" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="https://i2-prod.hulldailymail.co.uk/news/history/article6951158.ece/ALTERNATES/s1227b/0_Queen-Victoria-Square-seen-from-the-dock-office-building-with-roads-cutting-all-around-the-statue-The-scene-is.jpg" alt="hull2" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/298000/298499-East-Riding-Of-Yorkshire-County.jpg" alt="prices-quay" style="width:100%">
+      </div>
+    </div>
+
     <p>
-      I am creating this page to serve my h5 file from Colourising Historical
-      Photos of Hull.<br>All you need to do is upload any historical image of your choice and this model will dive you the real colorised image
+      I am creating this page to serve a GAN-based algorithm that has been trained on Historical
+      Images, with a bias to images of Hull.<br>All you need to do is upload any historical image of your choice and this model will dive you the real colorised image.
     </p>
-    <h3>Upload Your Image</h3>
+
+    <h3>Upload Your Image!</h3>
 
     <div class="content1">
-    <form id="form1">
-      
-      <label for="discription">Image Discription:  </label>
+
+    <form id="form1">      
+      <label for="discription">Image Discription: </label>
       <br>
-      <input type="text" id="discription" placeholder="Enter image discription">  
+      <input type="text" id="discription" placeholder="Enter Image Discription...">  
       <br>
-      <input type="submit" for="discription" id="button1"> 
+      <input type="submit" for="discription" id="button1">
       <p class="output" id="output1"> </p>
     </form>
     </div>
 
     <div class="content2">
+
       <form id="imageForm">
       <label for="photo1">Select Image:</label>
       <input type="file" accept="image/*" id="photo1">
-      <br>
-      <button type="submit">Upload</button>
       </form><br>
       <div id="canvas"></div>
   </div>
 
+
+  <h4 id="bottom"></h4>
+  <a href="#top">Scroll to top</a>
   </body>
 
   <script src="./index.js"></script>
