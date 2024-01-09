@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Color Hull</title>
+    <title>
+    Color Hull
+    </title>
     <link rel="stylesheet" href="./index.css">
   </head>
 
   <body>
 
-
     <h4 id="top"></h4>
     <a href="#bottom">Scroll To Bottom</a>
-    <h1 class="title">ColorHull</h1>
+
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">About</a>
+    </div>
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰    ColorHull  </button>  
+    </div>
+
 
     <div class="row">
       <div class="column">
@@ -24,40 +34,42 @@
       </div>
     </div>
 
-    <p>
-      I am creating this page to serve a GAN-based algorithm that has been trained on Historical
-      Images, with a bias to images of Hull.<br>All you need to do is upload any historical image of your choice and this model will dive you the real colorised image.
-    </p>
-
     <h3>Upload Your Image!</h3>
 
-    <div class="content1">
-
-    <form id="form1">      
-      <label for="discription">Image Discription: </label>
-      <br>
-      <input type="text" id="discription" placeholder="Enter Image Discription...">  
-      <br>
-      <input type="submit" for="discription" id="button1">
-      <p class="output" id="output1"> </p>
-    </form>
+    <div class="TextDescription">
+      <form id="form1">      
+        <label for="description">Image Description: </label>
+        <br>
+        <input type="text" id="description" placeholder="Enter Image Description...">  
+        <br>
+        <input type="submit" for="description" id="button1">
+        <p class="output" id="output1"> </p>
+      </form>
     </div>
 
-    <div class="content2">
+    <div class="ImageUpload">
+      <form id="imageForm" method="POST" enctype="multipart/form-data">
+        <label for="photo1">Select Image:</label>
+        <input type="file" accept="image/*" id="photo1">
+      </form>
+      <br>
+    </div>
 
-      <form id="imageForm">
-      <label for="photo1">Select Image:</label>
-      <input type="file" accept="image/*" id="photo1">
-      </form><br>
-      <div id="canvas"></div>
-  </div>
+  <div>
+    <table border="1px">
+      <tr>
+        <td id="row1" style="width: 1000px; height: 500px;"></td>
+        <td id="row2" style="width: 1000px; height: 500px;"></td>
+      </tr>
+    </table>
+  </div>  
 
-
+  <div>
   <h4 id="bottom"></h4>
+  </div>
   <a href="#top">Scroll to top</a>
   </body>
 
   <script src="./index.js"></script>
 
 </html>
-

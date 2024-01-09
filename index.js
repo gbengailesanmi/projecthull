@@ -21,7 +21,17 @@ imgInput.addEventListener("change",function(){
   const reader = new FileReader();
   reader.addEventListener("load", ()=>{
     uploaded_img = reader.result;
-    document.querySelector("#canvas").style.backgroundImage = "url("+uploaded_img+")";
+    document.querySelector("#row1").style.backgroundImage = "url("+uploaded_img+")";
   });
   reader.readAsDataURL(this.files[0]);
 })
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
