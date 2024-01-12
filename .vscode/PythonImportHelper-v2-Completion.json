@@ -1,77 +1,147 @@
 [
     {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
-        "label": "UUID",
-        "importPath": "uuid",
-        "description": "uuid",
+        "label": "StreamingResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
         "isExtraImport": true,
-        "detail": "uuid",
+        "detail": "fastapi.responses",
         "documentation": {}
     },
     {
-        "label": "uuid4",
-        "importPath": "uuid",
-        "description": "uuid",
-        "isExtraImport": true,
-        "detail": "uuid",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Gender",
+        "label": "io",
         "kind": 6,
-        "importPath": "models",
-        "description": "models",
-        "peekOfCode": "class Gender(str, Enum):\n    male = \"male\"\n    female = \"female\"\nclass Role(str, Enum):\n    student = \"student\"\n    teacher = \"teacher\"\nclass User(BaseModel):\n    id: Optional[UUID] = uuid4()\n    first_name: Optional[str]\n    last_name: Optional[str]",
-        "detail": "models",
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
         "documentation": {}
     },
     {
-        "label": "Role",
+        "label": "numpy",
         "kind": 6,
-        "importPath": "models",
-        "description": "models",
-        "peekOfCode": "class Role(str, Enum):\n    student = \"student\"\n    teacher = \"teacher\"\nclass User(BaseModel):\n    id: Optional[UUID] = uuid4()\n    first_name: Optional[str]\n    last_name: Optional[str]\n    middle_name: Optional[str]\n    gender: Gender\n    roles: Optional[List[Role]]",
-        "detail": "models",
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
         "documentation": {}
     },
     {
-        "label": "User",
+        "label": "tensorflow",
         "kind": 6,
-        "importPath": "models",
-        "description": "models",
-        "peekOfCode": "class User(BaseModel):\n    id: Optional[UUID] = uuid4()\n    first_name: Optional[str]\n    last_name: Optional[str]\n    middle_name: Optional[str]\n    gender: Gender\n    roles: Optional[List[Role]]",
-        "detail": "models",
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow.image",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow.image",
+        "description": "tensorflow.image",
+        "detail": "tensorflow.image",
+        "documentation": {}
+    },
+    {
+        "label": "img_to_array",
+        "importPath": "tensorflow.keras.utils",
+        "description": "tensorflow.keras.utils",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageEnhance",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "load_model",
+        "importPath": "keras.models",
+        "description": "keras.models",
+        "isExtraImport": true,
+        "detail": "keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "process_image",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def process_image(image):\n    \"\"\"\n    Preprocess the image.\n    Parameters:\n    - image: bytes - The raw image data.\n    Returns:\n    - np.ndarray: Processed image as a NumPy array.\n    \"\"\"\n    img_array = np.zeros(shape=(1, 256, 256, 3), dtype=np.float32)\n    # Convert image bytes to NumPy array",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "colorize_image",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def colorize_image(image):\n    \"\"\"\n    Colorize the image using a pre-trained model.\n    Parameters:\n    - image: np.ndarray - The preprocessed image.\n    Returns:\n    - PIL.Image.Image: Colorized image as a PIL Image.\n    \"\"\"\n    # Feed image to model and get output\n    pred_out = model.predict(tf.expand_dims(image, axis=0))[0]",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "save_image_to_bytes",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def save_image_to_bytes(image):\n    \"\"\"\n    Save a PIL Image to a byte buffer.\n    Parameters:\n    - image: PIL.Image.Image - The image to be saved.\n    Returns:\n    - io.BytesIO: Byte buffer containing the image data.\n    \"\"\"\n    image_bytes = io.BytesIO()\n    image.save(image_bytes, format='JPEG')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\n# Load the pre-trained model during application startup\nmodel = load_model('pix2pix_1000epoch.h5')\n# Endpoint to colorize uploaded images\n@app.post(\"/colourizer/\")\nasync def get_colorized_image(file: UploadFile = File(...)):\n    \"\"\"\n    Colorize an uploaded image.\n    Parameters:\n    - file: UploadFile - The image file to be colorized.",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "model = load_model('pix2pix_1000epoch.h5')\n# Endpoint to colorize uploaded images\n@app.post(\"/colourizer/\")\nasync def get_colorized_image(file: UploadFile = File(...)):\n    \"\"\"\n    Colorize an uploaded image.\n    Parameters:\n    - file: UploadFile - The image file to be colorized.\n    Returns:\n    - StreamingResponse: The colorized image as a streaming response.",
+        "detail": "main",
         "documentation": {}
     }
 ]
