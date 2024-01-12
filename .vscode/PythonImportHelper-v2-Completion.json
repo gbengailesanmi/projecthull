@@ -1,0 +1,77 @@
+[
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Gender",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Gender(str, Enum):\n    male = \"male\"\n    female = \"female\"\nclass Role(str, Enum):\n    student = \"student\"\n    teacher = \"teacher\"\nclass User(BaseModel):\n    id: Optional[UUID] = uuid4()\n    first_name: Optional[str]\n    last_name: Optional[str]",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Role(str, Enum):\n    student = \"student\"\n    teacher = \"teacher\"\nclass User(BaseModel):\n    id: Optional[UUID] = uuid4()\n    first_name: Optional[str]\n    last_name: Optional[str]\n    middle_name: Optional[str]\n    gender: Gender\n    roles: Optional[List[Role]]",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class User(BaseModel):\n    id: Optional[UUID] = uuid4()\n    first_name: Optional[str]\n    last_name: Optional[str]\n    middle_name: Optional[str]\n    gender: Gender\n    roles: Optional[List[Role]]",
+        "detail": "models",
+        "documentation": {}
+    }
+]
