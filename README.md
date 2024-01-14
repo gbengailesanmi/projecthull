@@ -1,45 +1,50 @@
-# FastAPI Image Colorizer
+# Frontend Application
 
-This is a FastAPI application that colorizes images using a pre-trained model.
+This project contains the frontend code for a web application that interacts with a backend API to display original and colorized images. 
 
-## Requirements
+## Getting Started
 
-Make sure you have Python and pip installed on your machine. You may also consider using a virtual environment for isolation.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```bash
-# Install virtual environment (optional)
-python -m venv venv
+### Prerequisites
 
-# Activate virtual environment
-source venv/bin/activate  # Unix or MacOS
-# or
-.\venv\Scripts\activate   # Windows
+What things you need to install the software and how to install them:
 
-# Install dependencies
-pip install -r requirements.txt
-```
+- A modern web browser like Chrome, Firefox, Safari, or Edge.
+- A local server environment (optional, for advanced use) like Apache, Nginx, or a simple Python HTTP server.
 
-## How to Run
-1. Activate Virtual Environment (if used):
-```bash
-source venv/bin/activate  # Unix or MacOS
-# or
-.\venv\Scripts\activate   # Windows
-```
+### Installing
 
-2. Run FastAPI:
-```bash
-uvicorn main:app --reload
-```
-Replace `main` with the actual name of your Python file and app with the name of your FastAPI instance if it's different.
+A step by step series of examples that tell you how to get a development environment running:
 
-3. Access the API:
-Once the server is running, you can access the API at [http://127.0.0.1:8000/](url). Use tools like curl, Postman, or a web browser using swagger [http://127.0.0.1:8000/docs](url)  to interact with the endpoints. Navigate to the /colourizer/ endpoint, click on "Try it out," and upload an image file.
+1. Clone the repository or download the source code to your local machine.
+2. Navigate to the directory where you saved the files.
+3. If using a local server, start the server and navigate to the project's directory. If not using a server, open the HTML file directly in a web browser.
 
-## How to Deactivate Virtual Environment
-To deactivate the virtual environment, run the command
-```bash
-deactivate  # Unix or MacOS
-# or
-.\venv\Scripts\deactivate  # Windows
-```
+### Running
+
+To run the application:
+
+- Open `index.html` in your web browser.
+- You should see the web application's interface.
+
+## Usage
+
+- To upload an image for colorization:
+  1. Click on the 'Select Image' button and choose an image from your computer.
+  2. Click on the 'Upload and Colorize' button to send the image to the backend API.
+  3. View the original and colorized images side by side on the web page.
+
+## Built With
+
+- HTML - The markup language used
+- CSS - The styling language used
+- JavaScript - The scripting language used
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/
