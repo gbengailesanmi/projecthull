@@ -1,30 +1,47 @@
-const txt1 = document.getElementById('discription');
-const btn1 = document.getElementById('button1');
-const out1 = document.getElementById('output1');
+document.addEventListener('DOMContentLoaded', function() {
 
-// 1. to submit image discription on button1 click
-function func1(event){
-  event.preventDefault();
-  out1.innerHTML = txt1.value;
-}
-btn1.addEventListener('click',func1);
-
-// 2. to upload image to s3 butcket
+  const imageForm = document.getElementById('imageForm');
+  const imgInput = document.getElementById('photo1');
 
 
-//3. Display the image
+  imageForm.addEventListener('submit', function(event) {
+      event.preventDefault();
 
-const imgInput = document.querySelector("#photo1");
-var uploaded_img = " ";
 
-imgInput.addEventListener("change",function(){
-  const reader = new FileReader();
-  reader.addEventListener("load", ()=>{
-    uploaded_img = reader.result;
-    document.querySelector("#row1").style.backgroundImage = "url("+uploaded_img+")";
+      if (imgInput.files.length === 0) {
+          alert("Please select an image to upload.");
+          return;
+      }
+
+      const originalImageUrl = URL.createObjectURL(imgInput.files[0]);
+      document.getElementById('originalImage').src = originalImageUrl;
+
+      const formData = new FormData();
+      formData.append('file', imgInput.files[0]);
+
+      // Replace 'API_ENDPOINT' with the actual endpoint
+      fetch('http://127.0.0.1:8000/colourizer/', { 
+          method: 'POST',
+          body: formData
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.blob();
+      })
+      .then(colorizedImage => {
+          const colorizedImageUrl = URL.createObjectURL(colorizedImage);
+          document.getElementById('colorizedImage').src = colorizedImageUrl;
+
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('There was an error processing your image.');
+      });
   });
-  reader.readAsDataURL(this.files[0]);
-})
+
+});
 
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";

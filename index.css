@@ -1,83 +1,88 @@
-.title {
-  text-align:center;
-  color: rgb(84, 28, 99);
-  background-color: #d7d1d1;
-}
-
 body {
-  /* height: 100%;
-  width:100%; */
   background-color: #ffffff;
   font-family: "Lato", sans-serif;
 }
 
-p {
+.title {
   text-align: center;
-  touch-action: pinch-zoom;
+  color: rgb(84, 28, 99);
+  background-color: #d7d1d1;
 }
 
-#description{
-  height: 70px;
-  width: 350px;
-}
 
-#output1{
-  width: 300px;
-  height:30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#row1{
-  margin-left: auto ;
-  margin-right: auto;
-  background-position: center;
-  background-size: cover;
-}
-
-#row2{
-  margin-left: auto ;
-  margin-right: auto;
-  background-position: center;
-  background-size: cover;
-}
-
-img {
-  height:180px;
-  width: 1398px;
-  object-fit: cover;
+.column {
+  float: inline-start;
+  width: 32%;
+  overflow: hidden;
+  padding: 5px;
+  height: 110px;
   display: flex;
-
-  margin-left: 20px;
-  margin-right: 20px; 
+  justify-content: center;
+  align-items: center;
 }
 
-.TextDescription {
-  text-align: center;
-  color: rgb(0, 0, 0);
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
+
+/* Image Upload Section */
 .ImageUpload {
   text-align: center;
   color: rgb(0, 0, 0);
+  margin-bottom: 20px;
 }
 
-h3 {
+/* Image Display Section */
+.ImageDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.OriginalImage, .ColorizedImage {
+  margin: 20px;
+  width: 256px;  /* Width set to 256px */
+  height: 256px; /* Height set to 256px */
+  background-position: center; /* Center the background image */
+  background-size: contain; /* Contain the image within the div without cropping */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-image:url('addimage.webp');
+
+}
+
+.OriginalImage img, .ColorizedImage img {
+  width: 100%;  /* Width of the image */
+  height: 100%; /* Height of the image */
+  object-fit: cover; /* This ensures the image maintains its aspect ratio */
+}
+
+h3, h5 {
   text-align: center;
   color: #111;
 }
 
-* {
-  box-sizing: border-box;
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ImageDisplay {
+    flex-direction: column;
+  }
+
+  .OriginalImage, .ColorizedImage {
+    width: 100%;
+    height: auto;
+  }
 }
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
 .row::after {
   content: "";
   clear: both;

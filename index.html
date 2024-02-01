@@ -1,75 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
-    Color Hull
-    </title>
-    <link rel="stylesheet" href="./index.css">
-  </head>
+<head>
+  <title>Color Hull</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
 
-  <body>
-
-    <h4 id="top"></h4>
-    <a href="#bottom">Scroll To Bottom</a>
+<!-- 
+  <h4 id="top"></h4>
+  <a href="#bottom">bottom</a> -->
 
 
-    <div id="mySidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#">About</a>
-    </div>
-    <div id="main">
-      <button class="openbtn" onclick="openNav()">☰    ColorHull  </button>  
-    </div>
-
-
-    <div class="row">
-      <div class="column">
-        <img src="https://www.visithull.org/wp-content/uploads/2020/01/Hull-Fountains-Queen-Victoria-Square-1390x611.jpg" alt="hull1" style="width:100%">
-      </div>
-      <div class="column">
-        <img src="https://i2-prod.hulldailymail.co.uk/news/history/article6951158.ece/ALTERNATES/s1227b/0_Queen-Victoria-Square-seen-from-the-dock-office-building-with-roads-cutting-all-around-the-statue-The-scene-is.jpg" alt="hull2" style="width:100%">
-      </div>
-      <div class="column">
-        <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/298000/298499-East-Riding-Of-Yorkshire-County.jpg" alt="prices-quay" style="width:100%">
-      </div>
-    </div>
-
-    <h3>Upload Your Image!</h3>
-
-    <div class="TextDescription">
-      <form id="form1">      
-        <label for="description">Image Description: </label>
-        <br>
-        <input type="text" id="description" placeholder="Enter Image Description...">  
-        <br>
-        <input type="submit" for="description" id="button1">
-        <p class="output" id="output1"> </p>
-      </form>
-    </div>
-
-    <div class="ImageUpload">
-      <form id="imageForm" method="POST" enctype="multipart/form-data">
-        <label for="photo1">Select Image:</label>
-        <input type="file" accept="image/*" id="photo1">
-      </form>
-      <br>
-    </div>
-
-  <div>
-    <table border="1px">
-      <tr>
-        <td id="row1" style="width: 1000px; height: 500px;"></td>
-        <td id="row2" style="width: 1000px; height: 500px;"></td>
-      </tr>
-    </table>
-  </div>  
-
-  <div>
-  <h4 id="bottom"></h4>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a style="font-size: small;">This app receives your photo, 
+      then uses a simple GAN-based algorithm 
+      to semantically colorize your submitted photo.</a>
   </div>
-  <a href="#top">Scroll to top</a>
-  </body>
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ ColorHull</button>  
+  </div>
 
+
+  <div class="row">
+    <div class="column">
+      <img src="https://www.visithull.org/wp-content/uploads/2020/01/Hull-Fountains-Queen-Victoria-Square-1390x611.jpg" alt="hull1" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="https://i2-prod.hulldailymail.co.uk/news/history/article6951158.ece/ALTERNATES/s1227b/0_Queen-Victoria-Square-seen-from-the-dock-office-building-with-roads-cutting-all-around-the-statue-The-scene-is.jpg" alt="hull2" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/298000/298499-East-Riding-Of-Yorkshire-County.jpg" alt="prices-quay" style="width:100%">
+    </div>
+  </div>
+
+  <h3>Upload Your Image!</h3>
+  <div class="ImageUpload">
+    <form id="imageForm" method="POST" enctype="multipart/form-data">
+      <label for="photo1">Select Image:</label>
+      <input type="file" accept="image/*" id="photo1">
+      <input type="submit" value="Submit" id="submitImage">
+    </form>
+    <br>
+  </div>
+
+  <div class="ImageDisplay">
+    <div class="OriginalImage">
+      <img id="originalImage" src="" alt=" "/>
+      <h5>Original Image</h5>
+    </div>
+    <div class="ColorizedImage">
+        <img id="colorizedImage" src="" alt=" "/>
+        <h5>Colorized Image</h5>
+    </div>
+  </div>
+
+  <!-- <div>
+    <h4 id="bottom"></h4>
+    </div>
+    <a href="#top">top</a> -->
+  
   <script src="./index.js"></script>
 
+</body>
 </html>
