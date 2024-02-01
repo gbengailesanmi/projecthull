@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(error => {
           console.error('Error:', error);
-          alert('There was an error processing your image.');
+          alert('There is an error processing your image.');
       });
   });
 
