@@ -1,6 +1,6 @@
 # Generative Adversarial Network (GAN) - FastAPI Image Colorizer
 
-This is a FastAPI application that colorizes images using a pre-trained model.
+This is a FastAPI application that colorizes images using a GAN pre-trained model.
 
 ## Requirements
 
