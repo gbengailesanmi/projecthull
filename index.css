@@ -58,7 +58,7 @@ body {
 .OriginalImage img, .ColorizedImage img {
   width: 100%;  /* Width of the image */
   height: 100%; /* Height of the image */
-  object-fit: cover; /* This ensures the image maintains its aspect ratio */
+/*  object-fit: cover; /* This ensures the image maintains its aspect ratio */
 }
 
 h3, h5 {
