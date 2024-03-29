@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.append('file', imgInput.files[0]);
 
       // Replace 'API_ENDPOINT' with the actual endpoint
-      fetch('https://pix2pixaieuw.azurewebsites.net/colourizer/', { 
+      fetch('http://13.60.20.242:8000/colourizer/', { 
           method: 'POST',
           body: formData
       })
