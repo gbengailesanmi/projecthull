@@ -22,9 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Replace 'API_ENDPOINT' with the actual endpoint
       fetch('http://16.170.228.246:8000/p', { 
           method: 'POST',
-          mode: 'no-cors',
-          // referrerPolicy: "unsafe_url" ,
-          body: formData
+          body: formData,
+          mode: 'no-cors'
       })
       .then(response => {
           if (!response.ok) {
