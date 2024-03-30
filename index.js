@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.append('file', imgInput.files[0]);
 
       // Replace 'API_ENDPOINT' with the actual endpoint
-      fetch('http://ec2-13-51-85-212.eu-north-1.compute.amazonaws.com/colourizer/', { 
+      fetch('http://13.51.85.212:8000/colourizer/', { 
           method: 'POST',
           body: formData
       })
