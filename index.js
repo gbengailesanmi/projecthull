@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.append('file', imgInput.files[0]);
 
       // Replace 'API_ENDPOINT' with the actual endpoint
-      fetch('ip-172-31-39-140.eu-north-1.compute.internal', { 
+      fetch('http://16.170.228.246:8000/p', { 
           method: 'POST',
           body: formData
       })
