@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.append('file', imgInput.files[0]);
 
       // Replace 'API_ENDPOINT' with the actual endpoint
-      fetch('http://16.170.228.246:8000/p', { 
+      fetch('//16.170.228.246:8000/p', { 
           method: 'POST',
           // referrerPolicy: "unsafe_url" ,
           body: formData
