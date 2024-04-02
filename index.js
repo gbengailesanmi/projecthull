@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.append('file', imgInput.files[0]);
 
       // Replace 'API_ENDPOINT' with the actual endpoint
-      fetch('http://16.170.249.188:80/p', { 
+      // fetch('http://16.170.249.188:80/p', { 
+      fetch('https://pix2pixaieuw.azurewebsites.net/colourizer/', { 
           method: 'POST',
           body: formData
           // mode: 'no-cors'
