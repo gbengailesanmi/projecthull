@@ -1,0 +1,10 @@
+__Pycache__
+*.psd
+*.pdf
+/venv
+.gitignore
+.gitattributes
+.slugignore
+README.md
+Procfile
+runtime.txt

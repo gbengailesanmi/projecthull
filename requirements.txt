@@ -1,4 +1,4 @@
-fastapi==0.70.0
-uvicorn==0.15.0
-tensorflow-macos==2.12.0
-Pillow==8.2.0
+fastapi
+uvicorn
+tensorflow==2.12.0
+Pillow

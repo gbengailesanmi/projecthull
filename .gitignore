@@ -2,3 +2,8 @@
 *.pdf
 *.h5
 /venv
+.slugignore
+.gitattributes
+.vscode
+.idea
+Dockerfile
